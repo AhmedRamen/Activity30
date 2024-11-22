@@ -6,11 +6,13 @@
 class Textbox {
 public:
 
-	explicit Textbox(std::string value) {
-		this->value = value;
-	}
+	//Default construct
+	Textbox() : value("") {}
 
-	void setValue(std::string newValue) {
+	//Explicit construct now with the string
+	explicit Textbox(const std::string& text) : value(text) {}
+
+	void setValue(std::string& newValue) {
 		value = newValue;
 	}
 
